@@ -3,15 +3,5 @@ body {
     height: 100vh;
     background-color: cornflowerblue;
     align-content: center;
-}
-
-#bubble-header {
-    font-size: 40;
-    color: white;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-
-#bubble-text-container {
-    display: flex;
-    justify-content: center;
+    margin: 0;
 }
