@@ -5,3 +5,15 @@ body {
     align-content: center;
     margin: 0;
 }
+
+
+/* MENU */
+#menu {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+ul {
+    list-style-type: none;
+}

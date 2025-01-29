@@ -6,9 +6,11 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setAnimationLoop(animate);
-renderer.setClearColor(0xffffff);
+renderer.setClearColor(0xffffff, 0.0);
 var container = document.getElementById("canvas");
 container.appendChild(renderer.domElement);
+
+window.addEventListener("resize", onWindowResize);
 
 
 class DirLight {
@@ -60,4 +62,11 @@ function animate() {
 	cube.rotation.y += 0.002;
 
 	renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 }
