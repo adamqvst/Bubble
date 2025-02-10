@@ -14,5 +14,9 @@ export default defineConfig({
     },
     server: {
         open: '/bubble.html',
+
+        watch: {
+            usePolling: true, // Enable polling for detecting file changes
+        }
     },
 })
